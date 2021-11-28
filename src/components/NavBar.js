@@ -1,25 +1,19 @@
-import { Navbar, Container, Nav, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
 	return (
-		<>
-			<Navbar bg='primary' variant='dark'>
-				<Container>
-					<Navbar.Brand href='/home'>
-						<Image
-							id='logo'
-							src='https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg'
-                            alt=''
-                            fluid
-						/>
-					</Navbar.Brand>
-					<Nav className='me-auto'>
-						<Nav.Link href='/home'>Home</Nav.Link>
-						<Nav.Link href='/search'>Search</Nav.Link>
-						<Nav.Link href='/favourites'>Favourites</Nav.Link>
-					</Nav>
-				</Container>
-			</Navbar>
-		</>
+		<div>
+			<nav
+				style={{
+					borderBottom: "solid 1px",
+					paddingBottom: "1rem",
+				}}
+			>
+				<Link to="/">Home</Link>
+				<Link to="/search">search</Link>
+				<Link to="/favorites">favorites</Link>
+
+			</nav>
+		</div>
 	);
 }
