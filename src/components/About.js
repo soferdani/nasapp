@@ -1,7 +1,9 @@
+import { Spinner } from "react-bootstrap";
+
 export default function About() {
     return (
         <div className='about'>
-            this is the About page
+            <p>This app created by Dani sofer</p>
         </div>
     );
 }

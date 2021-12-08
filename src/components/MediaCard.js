@@ -9,7 +9,7 @@ export default function MediaCard({ data }) {
                 <Card.Body>
                     <Card.Title>{data.title}</Card.Title>
                     <Card.Text>
-                        {data.explanation}
+                        {data.explanation && ""}
                     </Card.Text>
                     <Button variant="primary">change this</Button>
                 </Card.Body>

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import MediaCard from "./MediaCard";
 
 export default function Search() {
     
@@ -18,10 +19,19 @@ export default function Search() {
         console.log(dataFromApi);
     }
 
+//item.links[0].href
+//item.data[0].title
     return (
-        <div className='Search'>
-            <input value={searchInput} type='text' placeholder='Search' onChange={handleChange} />
-            <button onClick={handleSubmitSearch}>Search</button>
-        </div>
+        <>
+            <div className='Search'>
+                <input value={searchInput} type='text' placeholder='Search' onChange={handleChange} />
+                <button onClick={handleSubmitSearch}>Search</button>
+            </div>
+            <div className='SearchResults'>
+                {searchRes.map(item => {
+                    console.log(item.data[0].title);
+                })}
+            </div>
+        </>
     );
 }
